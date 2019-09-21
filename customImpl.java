@@ -3,12 +3,7 @@ package Project;
 import java.util.AbstractList;
 import java.util.List;
 
-public class customImpl {
-	public static <T> List<T> asList(T[] a) {
-	    return new MyArrayList<T>(a);
-	}
-
-	private static class MyArrayList<T> extends AbstractList<T> {
+	class MyArrayList<T> extends AbstractList<T> {
 
 	    private final T[] a;
 
@@ -29,5 +24,9 @@ public class customImpl {
 	    public int size() {
 	        return a.length;
 	    }
+	
+	
+	public static <T> List<T> asList(T[] a) {
+	    return new MyArrayList<T>(a);
 	}
 }
