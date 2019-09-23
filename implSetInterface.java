@@ -1,6 +1,7 @@
 package Project;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -19,16 +20,30 @@ public class implSetInterface {
 			num = Math.round(num);
 			System.out.print(num + ", ");
 			s1.add((int) num);
-			s2.add(num + "");
+			s2.add(num + "string");
 			s3.add(num);
 		}
+		System.out.println();
+		
+
 		
 		print(s1);
 		print(s2);
 		print(s3);
 		
+		goIterator(s1);
+		goIterator(s2);
+		goIterator(s3);
+		
 		s1.clear();
 		print(s1);
+	}
+
+	private static void goIterator(Set<?> list) {
+		Iterator<?> it = list.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
 	}
 
 	private static <T> void print(Set<T> set) {
