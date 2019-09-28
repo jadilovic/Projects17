@@ -1,5 +1,7 @@
 package Project;
 
+import java.util.Iterator;
+
 public class testOwnCollection {
 
 	public static void main(String[] args) {
@@ -20,9 +22,14 @@ public class testOwnCollection {
 		}
 		System.out.println();
 		System.out.println(aki.set(3, 33));
+		System.out.println();
 		for(int i = 0; i < aki.size(); i++){
 		System.out.println(aki.get(i));
 		}
+		
+		Iterator it = aki.iterator();
+		
+		
 	}
 
 }

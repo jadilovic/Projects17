@@ -45,13 +45,15 @@ public class ownCollectionFramework<T> extends AbstractSet<T> {
 		return false;
 	}
 
-	@Override
-	public Iterator iterator() {
-		return null;
-	}
 
 	@Override
 	public int size() {
 		return a.length;
 	}
+
+@Override
+public Iterator<T> iterator() {
+	// TODO Auto-generated method stub
+	return null;
+}
 }
